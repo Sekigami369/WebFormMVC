@@ -19,6 +19,7 @@ namespace WebFormMVC.Models
 
         [Column("Gendrt")]
         [Required]
+        [Required]
         public  string Gender { get; set; }
 
         [Column("JobName")]

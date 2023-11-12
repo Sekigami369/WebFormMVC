@@ -12,7 +12,7 @@ namespace WebFormMVC.Models
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            optionsBuilder.UseSqlServer();
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
         }
     }
 }
