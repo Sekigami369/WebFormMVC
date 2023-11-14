@@ -1,10 +1,13 @@
 ﻿using Microsoft.Build.Framework;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebFormMVC.Models
 {
-    public class PersonalDataModel
+    public class PersonalDataModel 
     {
+
+
         [Column("InputID")]
         [Required]
         public int InputID { get; set; }
@@ -19,7 +22,7 @@ namespace WebFormMVC.Models
 
         [Column("Gendrt")]
         [Required]
-        [Required]
+     
         public  string Gender { get; set; }
 
         [Column("JobName")]

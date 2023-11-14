@@ -3,10 +3,10 @@ using WebFormMVC.Models;
 
 namespace WebFormMVC.Controllers
 {
-    public class PersonalController : Controller
+    public class PersonalDataModelsController : Controller
     {
         private readonly MyDatabaseDbContext  myDbContext;
-        public PersonalController(MyDatabaseDbContext myDbContext)
+        public PersonalDataModelsController(MyDatabaseDbContext myDbContext)
         {
             this.myDbContext = myDbContext;
         }                            

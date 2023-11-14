@@ -1,9 +1,21 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace WebFormMVC.Models
 {
     public class MyDatabaseDbContext : DbContext
     {
+        public MyDatabaseDbContext()
+        {
+
+        }
+
+        public MyDatabaseDbContext(DbContextOptions<MyDatabaseDbContext> options): base(options)
+        {
+
+        }
+
+
         public DbSet<PersonalDataModel> personalDatas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -14,5 +26,8 @@ namespace WebFormMVC.Models
 
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
         }
+
+
     }
 }
+s
