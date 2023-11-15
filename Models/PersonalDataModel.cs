@@ -1,15 +1,17 @@
-﻿using Microsoft.Build.Framework;
+﻿using MessagePack;
+using Microsoft.Build.Framework;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Net;
+using RequiredAttribute = Microsoft.Build.Framework.RequiredAttribute;
 
 namespace WebFormMVC.Models
 {
-    public class PersonalDataModel 
+    public class PersonalDataModel
     {
-
-
         [Column("InputID")]
-        [Required]
+        [Required]  
         public int InputID { get; set; }
 
         [Column("Name")]
