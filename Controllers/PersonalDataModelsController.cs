@@ -13,9 +13,17 @@ namespace WebFormMVC.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            return myDbContext.personalDatas != null ?
-                View(await myDbContext.personalDatas.ToListAsync()) :
-                Problem("Entity set 'myDbContext.personalDatas' is null.");            
+            if(myDbContext.PersonalData != null)
+            {
+                var data =await myDbContext.PersonalData.ToListAsync();
+                return View(data);
+            }
+            else
+            {
+                Console.WriteLine("myDbContextがnull");
+                return Problem("データベースにデータがありません。");
+            }
+            
         }
     }
 }

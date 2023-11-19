@@ -8,6 +8,7 @@ using RequiredAttribute = Microsoft.Build.Framework.RequiredAttribute;
 
 namespace WebFormMVC.Models
 {
+    [Table("PersonalData")]
     public class PersonalDataModel
     {
         [Column("InputID")]
@@ -22,7 +23,7 @@ namespace WebFormMVC.Models
         [Required]
         public DateTime BirthDay { get; set; }
 
-        [Column("Gendrt")]
+        [Column("Gender")]
         [Required]
      
         public  string Gender { get; set; }

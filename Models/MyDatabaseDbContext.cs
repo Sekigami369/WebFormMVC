@@ -12,11 +12,11 @@ namespace WebFormMVC.Models
 
         public MyDatabaseDbContext(DbContextOptions<MyDatabaseDbContext> options): base(options)
         {
-
+           
         }
 
 
-        public DbSet<PersonalDataModel> personalDatas { get; set; }
+        public DbSet<PersonalDataModel> PersonalData { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
